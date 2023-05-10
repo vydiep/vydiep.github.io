@@ -2,8 +2,11 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/linearRegression/linearRegression.html",
+      "/posts/auditing-bias/Untitled.html",
       "/posts/perceptron/perceptron.html",
       "/posts/logisticRegression/logisticRegression.html",
+      "/posts/palmer-penguins/palmer_penguins.html",
       "/posts/dr-timnit-gebru/dr-timnit-gebru.html",
       "/posts/example-blog-post/index.html"
     ]
