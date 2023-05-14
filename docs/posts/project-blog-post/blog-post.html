@@ -20,6 +20,25 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
 </style>
 
 
@@ -126,7 +145,7 @@ background-size: cover;
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 <p>When listening to music, it’s common to encounter an unfamiliar song that one wishes to quickly identify. To address this challenge, our project leverages the MusicNet data set to classify whether a given piece of classical music is composed by Beethoven. This project aimed to tackle this seemingly small but persistent issue, with the hope of contributing to the larger music identification problem.</p>
-<p>There is a limited number of resources on how researchers within the Machine Learning field addressed this problem. On the other hand, genre classification using music audio files is a widely explored problem with numerous approaches available. <span class="citation" data-cites="costa2017evaluation">@costa2017evaluation</span> used the ISMIR 2004 Database, the LMD database, and a collection of field recordings of ethnic African music to train a model to classify music genres. They found that the spectrograms of audio when used with a CNN model performs just as well if not better than individual classifiers trained with visual representation on all datasets. <span class="citation" data-cites="khamees2021classifying">@khamees2021classifying</span> used the GTZAN data set for music classification. In their studies, they created and compared the performance of CNN and RNN models. They found that a CNN model with Max-Pooling outperformed RNN with LSTM. The CNN model yielded a testing accuracy of 74% and the RNN model yielded a testing accuracy of 63%. <span class="citation" data-cites="kakarla2022recurrent">@kakarla2022recurrent</span> also used the GTZAN dataset, worked with the MFCCs of audio files, and found that a 5-layered independent RNN was able to achieve 84% accuracy.</p>
+<p>There is a limited number of resources on how researchers within the Machine Learning field addressed this problem. On the other hand, genre classification using music audio files is a widely explored problem with numerous approaches available. <span class="citation" data-cites="costa2017evaluation">Costa, Oliveira, and Silla Jr (<a href="#ref-costa2017evaluation" role="doc-biblioref">2017</a>)</span> used the ISMIR 2004 Database, the LMD database, and a collection of field recordings of ethnic African music to train a model to classify music genres. They found that the spectrograms of audio when used with a CNN model performs just as well if not better than individual classifiers trained with visual representation on all datasets. <span class="citation" data-cites="khamees2021classifying">Khamees et al. (<a href="#ref-khamees2021classifying" role="doc-biblioref">2021</a>)</span> used the GTZAN data set for music classification. In their studies, they created and compared the performance of CNN and RNN models. They found that a CNN model with Max-Pooling outperformed RNN with LSTM. The CNN model yielded a testing accuracy of 74% and the RNN model yielded a testing accuracy of 63%. <span class="citation" data-cites="kakarla2022recurrent">Kakarla et al. (<a href="#ref-kakarla2022recurrent" role="doc-biblioref">2022</a>)</span> also used the GTZAN dataset, worked with the MFCCs of audio files, and found that a 5-layered independent RNN was able to achieve 84% accuracy.</p>
 <p>While our project may not be as complex as music genre classification, we used this research as guidance and created a variety of simple CNN models and RNN models with LSTM to work towards this problem of identifying the composer of classical music.</p>
 </section>
 <section id="values-statement" class="level2">
@@ -194,10 +213,21 @@ background-size: cover;
 <p>Engaging in this project has instilled in me a heightened awareness of the broader implications and consequences of my work. Moving forward, I am committed to considering the direct and indirect impacts of my actions on indiviudals and society as a whole. Furthermore, I recognize the significance of effective collaboration and teamwork. I will continue to be a team member who’s actively contributing by regularly communicating with my partner(s), completing my portion of the work before our set meetings, and providing my partner(s) help if they need it.</p>
 
 
+
 </section>
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-costa2017evaluation" class="csl-entry" role="doc-biblioentry">
+Costa, Yandre MG, Luiz S Oliveira, and Carlos N Silla Jr. 2017. <span>“An Evaluation of Convolutional Neural Networks for Music Classification Using Spectrograms.”</span> <em>Applied Soft Computing</em> 52: 28–38.
+</div>
+<div id="ref-kakarla2022recurrent" class="csl-entry" role="doc-biblioentry">
+Kakarla, Chaitanya, Vidyashree Eshwarappa, Lakshmi Babu Saheer, and Mahdi Maktabdar Oghaz. 2022. <span>“Recurrent Neural Networks for Music Genre Classification.”</span> In <em>Artificial Intelligence XXXIX: 42nd SGAI International Conference on Artificial Intelligence, AI 2022, Cambridge, UK, December 13–15, 2022, Proceedings</em>, 267–79. Springer.
+</div>
+<div id="ref-khamees2021classifying" class="csl-entry" role="doc-biblioentry">
+Khamees, Ahmed A, Hani D Hejazi, Muhammad Alshurideh, and Said A Salloum. 2021. <span>“Classifying Audio Music Genres Using CNN and RNN.”</span> In <em>Advanced Machine Learning Technologies and Applications: Proceedings of AMLTA 2021</em>, 315–23. Springer.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
