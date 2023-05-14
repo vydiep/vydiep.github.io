@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.189">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>My Awesome CSCI 0451 Blog – blog-post</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<style>
+    .quarto-title-block .quarto-title-banner {
+      color: white;
+background-image: url(../../img/landscape.png);
+background-size: cover;
+    }
+    </style>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">My Awesome CSCI 0451 Blog</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html">About</a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/"><i class="bi bi-github" role="img">
+</i> 
+ </a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com"><i class="bi bi-twitter" role="img">
+</i> 
+ </a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+<section id="composer-classification" class="level1">
+<h1>Composer Classification</h1>
+<p>By Vy Diep and Katie Macalintal</p>
+<section id="abstract" class="level2">
+<h2 class="anchored" data-anchor-id="abstract">Abstract</h2>
+<p>The aim of this project was to develop a machine learning model capable of differentiating the compositions of a classical music composer. Specifically, our focus centered on determining whether or not a given piece of classical music was composed by Beethoven. The MusicNet data set, consisting of 330 .wav files, served as the primary data source for training and evaluation. Convolutional Neural Network (CNN) models and Recurrent Neural Network (RNN) models were developed and trained using appropriate preprocessing techniques and feature extraction methods. The RNN models achieved an average accuracy rate of 76%, while the CNN models achieved an average accuracy rate of 74%. While the achieved accuracies fell below the desired results, this project provided valuable insights into the challenges of attributing classical music compositions.</p>
+<p>GitHub Repository: <a href="https://github.com/vydiep/MLProject">MLProject</a></p>
+</section>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>When listening to music, it’s common to encounter an unfamiliar song that one wishes to quickly identify. To address this challenge, our project leverages the MusicNet data set to classify whether a given piece of classical music is composed by Beethoven. This project aimed to tackle this seemingly small but persistent issue, with the hope of contributing to the larger music identification problem.</p>
+<p>There is a limited number of resources on how researchers within the Machine Learning field addressed this problem. On the other hand, genre classification using music audio files is a widely explored problem with numerous approaches available. <span class="citation" data-cites="costa2017evaluation">@costa2017evaluation</span> used the ISMIR 2004 Database, the LMD database, and a collection of field recordings of ethnic African music to train a model to classify music genres. They found that the spectrograms of audio when used with a CNN model performs just as well if not better than individual classifiers trained with visual representation on all datasets. <span class="citation" data-cites="khamees2021classifying">@khamees2021classifying</span> used the GTZAN data set for music classification. In their studies, they created and compared the performance of CNN and RNN models. They found that a CNN model with Max-Pooling outperformed RNN with LSTM. The CNN model yielded a testing accuracy of 74% and the RNN model yielded a testing accuracy of 63%. <span class="citation" data-cites="kakarla2022recurrent">@kakarla2022recurrent</span> also used the GTZAN dataset, worked with the MFCCs of audio files, and found that a 5-layered independent RNN was able to achieve 84% accuracy.</p>
+<p>While our project may not be as complex as music genre classification, we used this research as guidance and created a variety of simple CNN models and RNN models with LSTM to work towards this problem of identifying the composer of classical music.</p>
+</section>
+<section id="values-statement" class="level2">
+<h2 class="anchored" data-anchor-id="values-statement">Values Statement</h2>
+<p>As avid music listeners, we were drawn to the idea of creating a project focused on analyzing music using its audio files. Our project could potentially be used by music theory researchers, classical music listeners, and anyone interested in exploring this genre. If we kept the labels indicating the original composer rather than changing it to “Other,” we could potentially identify patterns and influences among different composers. It’s also important to note that our models were only trained on classical music from Western composers, potentially perpetuating inequalities in the music industry. Misclassifications could also result in the improper attribution of credit to certain composers. While our project is still small in scale, we recognize that as it grows, it may require additional computational resources, which could introduce environmental concerns.</p>
+<p>While our project can do a better job of incorporating classical music from non-Western composers, we still believe that it could bring joy and value to the world of classical music.</p>
+</section>
+<section id="materials-and-methods" class="level2">
+<h2 class="anchored" data-anchor-id="materials-and-methods">Materials and Methods</h2>
+<section id="data" class="level3">
+<h3 class="anchored" data-anchor-id="data">Data</h3>
+<p>We utilized the MusicNet data set, which encompassed a collection of 330 audio files of classical music. These files have varying durations with the shortest being 55 seconds and longest being almost 18 minutes. Approximately 48% of the data set consisted of pieces composed by Beethoven, while the remaining files were by other composers. The audio files also exhibited a diverse range of instruments.</p>
+</section>
+<section id="approach" class="level3">
+<h3 class="anchored" data-anchor-id="approach">Approach</h3>
+<p>To ensure a fair comparison of the models’ ability to distinguish Beethoven’s music, we standardized the data set by using only the first 45 seconds of each audio file. Furthermore, we divided this 45 seconds segment into 15 smaller pieces, each lasting 3 seconds. This subdivision allowed us to generate additional data points, which was beneficial for training and evaluating our neural network models.</p>
+<p>After segmenting the audio files, we obtained a total of 4950 pieces of data. To ensure an effective training process, we split the data using an 80-20 ratio. Specifically, 80% of the data was allocated for training purposes, while the remaining was reserved for testing the models’ performance. Within the training data, we further divided it into an 80-20 ratio, designating 80% for training and 20% for validation.</p>
+<p>To evaluate the performance of our models during training and validation phases, we tracked the history of loss and accuracy metrics. Given the large storage requirements of audio files, we conducted our work primarily on Google Colab.</p>
+<section id="cnn" class="level4">
+<h4 class="anchored" data-anchor-id="cnn">CNN</h4>
+<p>The CNN models we developed utilized mel spectrograms, which are visual representations of audio data, as the input features. Mel spectrograms, also known as Mel-frequency spectrograms, share a similar structure to regular spectrograms, featuring a two-dimensional image format where the x-axis represents time and the y-axis represents frequency. The intensity represented by the color of each point in the mel spectrogram image corresponds to the magnitude of the associated frequency component. Notably, mel spectrograms differ from regular spectrograms in that they apply a frequency warping known as mel scale, aligning the frequency representation to better match human auditory perception. For our targets, we used our composer labels. Given the straightforward nature of our task, we proceeded to train two versions of our model, which consisted of six convolutional layers followed by a max-pooling layer. The two variations included one model with a dropout layer and another model without it.</p>
+</section>
+<section id="rnn" class="level4">
+<h4 class="anchored" data-anchor-id="rnn">RNN</h4>
+<p>Another model we used to analyze our clips of music was a recursive neural network (RNN) with long short-term memory (LSTM), which is good at understanding order and analyzing sequential data. We utilized the mel-frequency cepstral coefficients (MFCC) of our audio clips as the input features. MFCCs are commonly used frequency domain features that represent the frequencies perceived by the human ear and capture the “brightness” of sound. For this model, we also used our composer labels as targets. Since our task was fairly simple, we trained four variations of LSTM models. We first experimented with 1 LSTM layer and 2 LSTM layers. Then to prevent overfitting, we experimented with 1 LSTM layer with a dropout layer and 2 LSTM layers with a dropout layer, both with a of probability of 0.2.</p>
+</section>
+</section>
+</section>
+<section id="results" class="level2">
+<h2 class="anchored" data-anchor-id="results">Results</h2>
+<section id="cnn-1" class="level3">
+<h3 class="anchored" data-anchor-id="cnn-1">CNN</h3>
+<p>Below are the history of our training and validation accuracy for the CNN models with and without a dropout layer.</p>
+<p><img src="https://github.com/vydiep/MLProject/blob/main/CNN/models/CNN-Reg.png?raw=true" class="img-fluid" alt="Graph of training and validation accuracy and loss for our CNN model without a dropout layer"> <img src="https://github.com/vydiep/MLProject/blob/main/CNN/models/CNN_Drop.png?raw=true" class="img-fluid" alt="Graph of training and validation accuracy and loss for our CNN model with a dropout layer"></p>
+<p>For each of our CNN models, we trained for a total of 25 epochs. Despite using a dropout layer (probability = 0.2), both models still showed signs of significant overfitting. The model without the dropout layer yielded a testing accuracy of 74%, while the model with the dropout layer yielded a testing accuracy of 73%.</p>
+</section>
+<section id="rnn-1" class="level3">
+<h3 class="anchored" data-anchor-id="rnn-1">RNN</h3>
+<p>Below are the history of our training and validation accuracy for our RNN models with 1 LSTM layer, 2 LSTM layers, 1 LSTM layer and a dropout layer, and 2 LSTM layers and a dropout layer.<br>
+<img src="https://github.com/vydiep/MLProject/blob/main/RNN/Models/LSTM/LSTM-1-Layer-graph.png?raw=true" class="img-fluid" alt="Graph of training and validation accuracy and loss for RNN model with 1 LSTM layer"><br>
+<img src="https://github.com/vydiep/MLProject/blob/main/RNN/Models/LSTM/LSTM-2-Layers-graph.png?raw=true" class="img-fluid" alt="Graph of training and validation accuracy and loss for RNN model with 2 LSTM layers"><br>
+<img src="https://github.com/vydiep/MLProject/blob/main/RNN/Models/LSTM-Dropout/LSTM-1-Layer-Dropout-graph.png?raw=true" class="img-fluid" alt="Graph of training and validation accuracy and loss for RNN model with 1 LSTM layer and Dropout layer"><br>
+<img src="https://github.com/vydiep/MLProject/blob/main/RNN/Models/LSTM-Dropout/LSTM-2-Layers-Dropout-graph.png?raw=true" class="img-fluid" alt="Graph of training and validation accuracy and loss for RNN model with 2 LSTM layers and Dropout layer"></p>
+<p>As conveyed in the graphs, we trained for about 100 epochs, for that’s when it looked like the training validation accuracy started to plateau, and were never able to surpass a training validation accuracy of 80%. For our model with 1 LSTM layer, we achieved a testing accuracy of 74%. For our model with 2 LSTM layers, we achieved a testing accuracy of 78%. For our models with dropout layers, we achieved a testing accuracy of 76%. While these accuracies are not the best, they are better than randomly guessing given that 48% of our data is Beethoven.</p>
+<p>We would also like to acknowledge that our results are based on one round of training on our data. In order to achieve more accurate results, we understand that training our models multiple times and averaging their results would provide a more accurate representation of how our models do.</p>
+</section>
+</section>
+<section id="concluding-discussion" class="level2">
+<h2 class="anchored" data-anchor-id="concluding-discussion">Concluding Discussion</h2>
+<p>In conclusion, our CNN models and RNN models were able to classify whether a piece of classical music was composed by Beethoven with an average testing accuracy of 75%. Although we weren’t able to reach our goal of an 80-85% testing accuracy, our results are still higher than our base rate of 48%. Since there aren’t many studies on composer classification, we referenced studies on music genre classifications. Our models produced similar testing accuracy compared to those studies.</p>
+<p>If we had more time, we would’ve been more mindful of how we cleaned our data. We spent a lot of time just trying to understand how processing and extracting features from audio data works. By the time that we finished cleaning our data, we weren’t fully aware of the complications that multiple instruments and segments of rests could introduce. In addition, we would’ve segmented the entirety of each piece, which would’ve resulted in more data points. We also would’ve spent more time fine tuning our models and playing with different variations.</p>
+</section>
+<section id="group-contribution-statement" class="level2">
+<h2 class="anchored" data-anchor-id="group-contribution-statement">Group Contribution Statement</h2>
+<p>The work for this project was fairly evenly distributed.</p>
+<p>Vy Diep wrote the code for the data relabeling and organization. She also developed the CNN model training and experimentation. For our presentation, she led the discussion on our approach and CNN results. For the blog post, she led the writing for the Abstract, Data, Approach, and CNN results sections.</p>
+<p>Katie Macalintal wrote the code for the RNN model training and experimentation. For our presentation, she led the discussion on the overview of our project and RNN results. For the blog post, she led the writing for the Introduction, Values Statement, and RNN results sections.</p>
+<p>There were also a handful of tasks that Katie and Vy would do together, but only one person would commit. We would often clean up our GitHub repository together and for the blog post, we worked together to craft the concluding discussion.</p>
+</section>
+<section id="personal-reflections" class="level2">
+<h2 class="anchored" data-anchor-id="personal-reflections">Personal Reflections</h2>
+<p>Throughout the course of this project, I have gained valuable insights and knowledge in various areas. I’ve delved into the intricacies of working with audio files for composer classification. I discovered the challenges and considerations specific to this task, including the lack of studies done on the topic, as well as the multiple aspects one needs to consider for audio preprocessing. I also acquired the skills to effectively implement a training/validation loop using the PyTorch framework, as well as implementing two variations of a CNN model.</p>
+<p>When my partner and I first proposed our project, I set my goals to be “become better at implementing efficient machine learning models”, as well as “further improve my communication and time management skills.” I now realize how vague the first goal is, considering there’s no metric to measure if I did become better at implementing efficient machine learning models. However, I think my work for this project has shown that I can implement convolutional netural network models. As for my other two goals, I think I did end up achieving them.</p>
+<p>The goals that my partner and I set for our project together though, were not fully met. The criteria we said would determine if we fully achieved our goal was have “a model that can identify whether a piece of classical music is composed by Beethoven or not about 80-85% of the time” and have “a Jupyter Notebook that demonstrates our understanding and results.” We met the second criteria, but not the first criteria. All of our models were in the 73-76% range for testing accuracy. We both tried really hard to improve the performance of our models. I had gone back multiple times to adjust the number of convolutional layers and fully connected layers. I also tested various kernel sizes, the number of kernels, and the strides. Looking back, I could’ve also adjusted the learning rate as well. I also wanted to see if the results would be better had we used the entirety of the first 45 seconds of each audio file. However, we found out that we didn’t have enough disk space for it, which was disappointing.</p>
+<p>Engaging in this project has instilled in me a heightened awareness of the broader implications and consequences of my work. Moving forward, I am committed to considering the direct and indirect impacts of my actions on indiviudals and society as a whole. Furthermore, I recognize the significance of effective collaboration and teamwork. I will continue to be a team member who’s actively contributing by regularly communicating with my partner(s), completing my portion of the work before our set meetings, and providing my partner(s) help if they need it.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

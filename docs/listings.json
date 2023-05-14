@@ -3,6 +3,7 @@
     "listing": "/index.html",
     "items": [
       "/posts/linearRegression/linearRegression.html",
+      "/posts/project-blog-post/blog-post.html",
       "/posts/auditing-bias/auditing-bias.html",
       "/posts/perceptron/perceptron.html",
       "/posts/logisticRegression/logisticRegression.html",
